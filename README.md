@@ -26,3 +26,20 @@ applications.
 
 They include the Naming Service, the Event and Notification Services, the
 Security Service, the Transaction and Concurrency Services and the Trading Service.
+
+
+### IDL Module
+
+```
+module Whiteboard {
+	struct Rectangle{
+	...} ;
+	struct GraphicalObject {
+	...};
+	interface Shape {
+	...};
+	typedef sequence <Shape, 100> All;
+	interface ShapeList {
+	...};
+};
+```
