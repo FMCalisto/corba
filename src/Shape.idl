@@ -1,0 +1,31 @@
+// IDL 
+// In file Shape.idl
+// Note: typedef <type> <name of type>
+
+struct Rectangle{
+	long width; 
+	long height;
+	long x;
+	long y;
+} ;
+
+
+struct GraphicalObject {
+	string type; 
+	Rectangle enclosing; 
+	boolean isFilled;
+};
+
+interface Shape {
+	long getVersion() ;
+   GraphicalObject getAllState() ;
+};
+
+typedef sequence <Shape, 100> All;
+
+interface ShapeList {
+	exception FullException {};
+	Shape newShape(in GraphicalObject g) raises (FullException);
+	All allShapes();
+    long getVersion() ;
+};
