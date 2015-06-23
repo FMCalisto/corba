@@ -14,7 +14,7 @@ public interface Shape extends Remote {
 }
 
 public interface ShapeList extends Remote, ShapeListOperations, org.omg.CORBA.Object, org.omg.CORBA.portable.IDLEntity {
-    Shape newShape(GraphicalObject g) throws RemoteException; 2
+    Shape newShape(GraphicalObject g) throws RemoteException;
     Vector allShapes() throws RemoteException;
     int getVersion() throws RemoteException;
 } // interface ShapeList
